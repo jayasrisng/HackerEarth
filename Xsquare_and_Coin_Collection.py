@@ -11,6 +11,8 @@ First line of input contains a single integer T denoting the number of test case
 
 OUTPUT
 For each test case , Print the maximum number of coins Xsquare can collect following the above gaming strategy.
+
+Detailed Question : https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/xsquare-and-coin-collection-2/
 '''
 
 def coins(n,h,k):
