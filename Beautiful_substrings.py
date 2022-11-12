@@ -75,4 +75,3 @@ if __name__ == "__main__":
         S.append(Si)
     S = sorted(S, key = lambda x: len(x), reverse = True)
     print(solve(S))
-Language: Python 3
