@@ -1,0 +1,36 @@
+def solve (N, Query):
+    d = {}
+    visited = set()
+    ans = []
+ 
+    for time, url, key, cid in Query:
+        if key in visited or len(key) <2 or len(key) > 12:
+            ans.append("NO")
+            continue
+ 
+        if cid in d and int(time) - int(d[cid]) < 5:
+            ans.append("NO")
+            continue
+ 
+        if not(url[0:7] == "http://" or url[0:8] == "https://"):
+            ans.append("NO")
+            continue
+ 
+        if key.isalnum():
+            visited.add(key)
+        else:
+            ans.append("NO")
+            continue
+ 
+        d[cid] = time
+ 
+        ans.append("YES")
+ 
+    return ans
+ 
+N = int(input())
+Query = [input().split() for i in range(N)]
+ 
+out_ = solve(N, Query)
+for i_out_ in out_:
+    print (i_out_)
